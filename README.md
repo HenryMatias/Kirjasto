@@ -12,5 +12,6 @@ To ensure that site works properly, you have to install following plugins:
 
 <p>
 After that Import kirjasto.WordPress.2020-11-09 file to WordPress.
-Finally copy all the text from CPT-UI-info file and paste it to CPT UI / Tools / Import Post Types
+Finally copy all the text from CPT-UI-info file and paste it to CPT UI / Tools / Import Post Types.
+After that, you should have a working website.
 </p>

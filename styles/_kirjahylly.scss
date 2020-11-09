@@ -1,0 +1,478 @@
+#bookcase {
+    padding: 0;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    .search-bar {
+        height: 90px;
+        width: 100%;
+        background-color: $theme-color;
+        border-radius: 20px 20px 0px 0px;
+        @include display(flex,center,space-between);
+        padding: 0 40px 0 89px;
+        h1 {
+            font-family: $font-sacramento;
+            font-size: 40px;
+            margin: 0;
+        }
+        form {
+            height: 55px;
+            .search-form {
+                @include display(flex,center,center);
+                .checkboxes {
+                    margin-right: 20px;
+                    .checkbox {
+                        label {
+                            margin: 0;
+                            color: #000;
+                            font-family: Nunito,sans-serif;
+                            font-weight: 700;
+                            font-size: 16px;
+                            input {
+                                margin-right: 10px;
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+                .text-inputs {
+                    @include display(flex,center,center);
+                    select {
+                        width: 200px;
+                        height: 55px;
+                        border-radius: 60px;
+                        overflow: hidden;
+                        box-shadow: inset 0 0 4px 0 #a49595;
+                        background-color: white;
+                        position: relative;
+                        border: none;
+                        padding-left: 20px;
+                        margin-right: 10px;
+                        outline: none;
+                        -webkit-appearance: none;
+                        &:focus {
+                            box-shadow: inset 0 0 7px 0 #ff0000;
+                        }
+                    }
+                    .search-input {
+                        width: 300px;
+                        height: 55px;
+                        border-radius: 60px;
+                        overflow: hidden;
+                        box-shadow: inset 0 0 4px 0 #a49595;
+                        background-color: white;
+                        position: relative;
+                        margin-right: 10px;
+                        i {
+                            position: absolute;
+                            left: 30px;
+                            color: black;
+                            top: 50%;
+                            font-size: 25px;
+                            margin-top: -12px;
+                        }
+                        input {
+                            border-radius: 60px;
+                            height: 100%;
+                            border: none;
+                            background-color: transparent;
+                            padding-left: 60px;
+                            outline: none;
+                            &:focus {
+                                box-shadow: inset 0 0 7px 0 #ff0000;
+                            }
+                        }
+                    }
+                    button {
+                        width: 55px;
+                        height: 55px;
+                        border-radius: 50%;
+                        border: none;
+                        background-color: white;
+                        position: relative;
+                        box-shadow: inset 0 0 4px 0 #a49595;
+                        outline: none;
+                        @include display(flex,center,center);
+                        &:focus {
+                            box-shadow: inset 0 0 7px 0 #ff0000;
+                        }
+                        i {
+                            color: black;
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nav {
+        height: 50px;
+        width: 100%;
+        background-color:#f8f8f8;
+        border-radius: 0px;
+        border-right: 1px solid lightgrey;
+        border-left: 1px solid lightgrey;
+        .row {
+            height: 50px;
+            width: 100%;
+            margin: 0;
+            .center {
+                @include display(flex,center,left);
+                padding: 0 10px;
+                p {
+                    margin: 0px;
+                    color: black;
+                    font-family: $font-nunito;
+                    font-weight: 700;
+                }
+            }
+            .center:nth-child(1) {
+                padding-left: 66px;
+            }
+            .center:nth-child(3) {
+                padding-left: 66px;
+            }
+        }
+    }
+    .content {
+        .row {
+            height: 270px;
+            border: 1px solid lightgrey;
+            border-top: none;
+            margin: 0;
+            .image {
+                @include display(flex,center,center);
+                img {
+                    max-width: 150px;
+                }
+            }
+            .content {
+                padding: 10px;
+                position: relative;
+                padding-top: 30px;
+                .info {
+                    h3 {
+                        margin: 0;
+                        font-size: 20px;
+                        font-family: $font-nunito;
+                    }
+                    .writer {
+                        font-size: 15px;
+                        font-family: $font-nunito;
+                        color: grey;
+                    }
+                    p {
+                        font-size: 16px;
+                        font-family: $font-nunito;
+                        line-height: 1.1!important;
+                    }
+                }
+                .specs {
+                    position: absolute;
+                    bottom: 0;
+                    @include display(flex,center,unset);
+                    .info-block {
+                        width: 130px;
+                        position: relative;
+                        i {
+                            color: red;
+                            position: absolute;
+                        }
+                        p {
+                            color: grey;
+                            font-size: 15px;
+                            font-family: $font-nunito;
+                            padding-left: 30px;
+                        }
+                    }
+                    .info-block:nth-child(3) {
+                        width: 300px;
+                    }
+                }
+            }
+            .loan {
+                padding: 10px;
+                @include display(flex,center,center);
+                .loan-info {
+                    width: 150px;
+                    .state,
+                    .return,
+                    .grading {
+                        height: 30px;
+                        width: 180px;
+                        @include display(flex,center,left);
+                        p {
+                            color: grey;
+                            font-size: 15px;
+                            font-family: $font-nunito;
+                            margin: 0;
+                        }
+                        .place,
+                        .date,
+                        .grade {
+                            p {
+                                color: black!important;
+                                padding-left: 5px;
+                                text-transform: capitalize;
+                            }
+                            img {
+                                margin-left: 10px;
+                                width: 100px;
+                                height: 20px;
+                            }
+                        }
+                        .status-color {
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            margin-left: 5px;
+                        }
+                        .lainassa {
+                            background-color: red;
+                        }
+                        .varattu {
+                            background-color: orange;
+                        }
+                        .vapaa {
+                            background-color: green;
+                        }
+                        .kadonnut {
+                            background-color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content-footer {
+        height: 50px;
+        width: 100%;
+        background-color:#f8f8f8;
+        text-align: center;
+        border-radius: 0px 0px 20px 20px;
+        border: 1px solid lightgrey;
+        border-top: none;
+        h1 {
+            font-family: $font-sacramento;
+            font-size: 30px;
+            line-height: 50px;
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    body {
+        #bookcase {
+            .search-bar {
+                height: 100%;
+                padding: 20px 20px;
+                flex-direction: column;
+                h1 {
+                    margin: 20px;
+                }
+                form {
+                    height: 100%;
+                    .search-form {
+                        flex-direction: column;
+                        .checkboxes {
+                            @include display(flex,center,left);
+                            width: 100%;
+                            margin-right: 0px;
+                            .checkbox {
+                                margin-right: 10px;
+                            }
+                        }
+                        .text-inputs {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .nav {
+                display: none;
+            }
+            .content {
+                .row {
+                    height: 255px;
+                    padding: 0 20px;
+                    .image {
+                        display: none!important;
+                    }
+                    .content {
+                        padding-bottom: 0;
+                        .info {
+                            .writer {
+                                margin: 0 0 1em 0;
+                            }
+                            p {
+                                margin: 0;
+                            }
+                        }
+                        .specs {
+                            display: none!important;
+                        }
+                    }
+                    .loan {
+                        .loan-info {
+                            @include display(flex,center,center);
+                            width: 100%!important;
+                            .state,
+                            .return,
+                            .grading {
+                                width: 100%!important;
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    body {
+        #pages-header {
+            .container {
+                h1 {
+                    font-size: 120px;
+                }
+            }
+        }
+        #bookcase {
+            .search-bar {
+                form {
+                    .search-form {
+                        .text-inputs {
+                            .search-input {
+                                width: 210px;
+                            }
+                        }
+                    }
+                }
+            }
+            .content {
+                .row {
+                    .loan {
+                        .grading {
+                            width: 100%!important;
+                            position: relative;
+                            .value {
+                                p {
+                                    display: none;
+                                }
+                            }
+                            .grade {
+                                position: absolute;
+                                right: 0%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    body {
+        #pages-header {
+            height: 300px;
+            .container {
+                height: 300px;
+                h1 {
+                    font-size: 90px;
+                }
+            }
+        }
+        #bookcase {
+            padding: 20px;
+            .search-bar {
+                form {
+                    width: 100%;
+                    .search-form {
+                        .checkboxes {
+                            display: none!important;
+                        }
+                        .text-inputs {
+                            .order {
+                                display: none!important;
+                            }
+                            .search-input {
+                                width: 100%!important;
+                            }
+                        }
+                    }
+                }
+            }
+            .books-content {
+                .content {
+                    .row {
+                        height: 100%;
+                        padding: 10px 20px;
+                        .content {
+                            padding: 0;
+                            .info {
+                                .writer {
+                                    display: block;
+                                }
+                                p {
+                                    display: none;
+                                }
+                            }
+                        }
+                        .loan {
+                            padding: 0;
+                            .loan-info {
+                                .grading {
+                                    display: none!important;
+                                }
+                                .state,
+                                .return {
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        #bookcase {
+            margin: 0;
+            .content {
+                .row {
+                    .content {
+                        .info {
+                            h3 {
+                                font-size: 16px;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        #bookcase {
+            margin: 0;
+            .books-content {
+                .content {
+                    .row {
+                        padding: 10px 10px;
+                    }
+                }
+            }
+        }
+    }
+}

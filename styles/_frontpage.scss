@@ -1,0 +1,388 @@
+body {
+    #frontpage-container {
+        height: 80vh;
+        background-image: url("../images/frontpage-background.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        .container {
+            height: 80vh;
+            @include display(flex,center,center);
+            position: relative;
+            z-index: 1;
+            .content {
+                width: 100%;
+                height: 60vh;
+                .row {
+                    width: 100%;
+                    .col-lg-6:nth-child(1) {
+                        @include display(flex,center,center);
+                        .content {
+                            position: relative;
+                            height: 600px;
+                            .head {
+                                @include display(flex,center,center);
+                                height: 300px;
+                            }
+                            .intro {
+                                box-shadow: 0 0 15px 1px #afaaaa;
+                                background-color: rgba(255,255,255,0.95);
+                                position: relative;
+                                height: 300px;
+                                width: 100%;
+                                position: absolute;
+                                bottom: 0%;
+                                .ribbon {
+                                    height: 50px;
+                                    width: 80%;
+                                    background-color: $theme-color;
+                                    margin-left: -20px;
+                                    position: relative;
+                                    box-shadow: 0 0 6px 0px $theme-shadow;
+                                    margin-top: 40px;
+                                    &:after {
+                                        content: "";
+                                        height: 30px;
+                                        width: 30px;
+                                        background-color: #a80f0f;
+                                        position: absolute;
+                                        left: 6px;
+                                        top: 33px;
+                                        transform: rotate(45deg);
+                                        z-index: -1;
+                                    }
+                                    &:before {
+                                        content: "";
+                                        height: 36px;
+                                        width: 36px;
+                                        background-color: white;
+                                        position: absolute;
+                                        right: -16px;
+                                        top: 7px;
+                                        transform: rotate(45deg);
+                                        z-index: 10;
+                                        box-shadow: inset 4px -5px 3px 0 $theme-shadow;
+                                    }
+                                    h2 {
+                                        font-size: 20px;
+                                        text-align: center;
+                                        color: red;
+                                        line-height: 50px;
+                                        margin: 0;
+                                    }
+                                }
+                                .navigation {
+                                    @include display(flex,center,space-between);
+                                    height: 210px;
+                                    padding: 0 50px;
+                                    .button {
+                                        width: 200px;
+                                        height: 50px;
+                                        border-radius: 5px;
+                                        line-height: 16px;
+                                        box-shadow: 0 0 6px 0px $theme-shadow!important;
+                                        transition: 0.3s all;
+                                        a {
+                                            text-decoration: none;
+                                            color: red;
+                                            &:hover {
+                                                color: red;
+                                            }
+                                        }
+                                    }
+                                    .button:nth-child(1) {
+                                        background-color: white!important;
+                                        color: red;
+                                        &:hover {
+                                            box-shadow: 0 0 10px 0px $theme-shadow!important;
+                                            transition: 0.2s all;
+                                            text-decoration: none!important;
+                                        }
+                                    }
+                                    .button:nth-child(2) {
+                                        background-color: $theme-color!important;
+                                        color: red;
+                                        &:hover {
+                                            box-shadow: 0 0 10px 0px $theme-shadow!important;
+                                            transition: 0.2s all;
+                                            text-decoration: none!important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .col-lg-6:nth-child(2) {
+                        height: 60vh;
+                        @include display(flex,center,center);
+                        .registeration {
+                            height: 600px;
+                            width: 400px;
+                            box-shadow: 0 0 15px 1px #afaaaa;
+                            background-color: rgba(255,255,255,0.95);
+                            position: relative;
+                            .ribbon {
+                                height: 50px;
+                                width: 80%;
+                                background-color: $theme-color;
+                                margin-left: -20px;
+                                position: relative;
+                                box-shadow: 0 0 6px 0px $theme-shadow;
+                                &:after {
+                                    content: "";
+                                    height: 30px;
+                                    width: 30px;
+                                    background-color: #a80f0f;
+                                    position: absolute;
+                                    left: 6px;
+                                    top: 33px;
+                                    transform: rotate(45deg);
+                                    z-index: -1;
+                                }
+                                &:before {
+                                    content: "";
+                                    height: 36px;
+                                    width: 36px;
+                                    background-color: white;
+                                    position: absolute;
+                                    right: -16px;
+                                    top: 7px;
+                                    transform: rotate(45deg);
+                                    z-index: 10;
+                                    box-shadow: inset 4px -5px 3px 0 $theme-shadow;
+                                }
+                                h2 {
+                                    font-size: 20px;
+                                    text-align: center;
+                                    color: red;
+                                    line-height: 50px;
+                                }
+                            }
+                            .form-area {
+                                margin: 100px 30px 0px 30px;
+                                .input-field {
+                                    margin-top: 30px;
+                                    width: 100%;
+                                    height: 60px;
+                                    box-shadow: inset 0 0 5px #e64e4e;
+                                    border-radius: 5px;
+                                    background-color: white;
+                                    position: relative;
+                                    i {
+                                        color: #aaa6a6;
+                                        font-size: 22px;
+                                        position: absolute;
+                                        left: 20px;
+                                        top: 50%;
+                                        margin-top: -11px;
+                                        transition: 0.3s;
+                                    }
+                                    .red {
+                                        color: red;
+                                        transition: 0.3s;
+                                    }
+                                    input {
+                                        height: 100%;
+                                        padding-left: 60px;
+                                        border: none;
+                                        background-color: transparent;
+                                        padding-bottom: 0px;
+                                        outline: none;
+                                        &:focus + label {
+                                            margin-top: -18px;
+                                            font-size: 14px;
+                                            font-weight: 700;
+                                            transition: 0.3s all;
+                                        }
+                                    }
+                                    label {
+                                        position: absolute;
+                                        font-family: $font-nunito;
+                                        text-transform: uppercase;
+                                        font-size: 16px;
+                                        left: 60px;
+                                        letter-spacing: 0.1rem;
+                                        font-weight: 400;
+                                        margin-bottom: 0px;
+                                        top: 50%;
+                                        margin-top: -12px;
+                                        pointer-events: none;
+                                        transition: 0.3s all;
+                                    }
+                                    .active {
+                                        margin-top: -18px;
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        transition: 0.3s all;
+                                    }
+                                }
+                                .cta-button {
+                                    margin-top: 30px;
+                                    width: 100%;
+                                    height: 60px;
+                                    border-radius: 5px;
+                                    button {
+                                        height: 100%;
+                                        width: 100%;
+                                        background-color: lightgray;
+                                        border-radius: 5px;
+                                        pointer-events: none;
+                                        transition: 0.3s all;
+                                        text-decoration: none;
+                                    }
+                                    .buttonactive {
+                                        background-color: red;
+                                        pointer-events: auto;
+                                        transition: 0.3s all;
+                                        &:hover {
+                                            box-shadow: 0 0 6px 0px #cf4848;
+                                            background-color: rgba(255, 0, 0, 0.8);
+                                            transition: 0.3s all;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        #frontpage-container {
+            .container {
+                .content {
+                    .row {
+                        margin: 0;
+                        .col-lg-6:nth-child(1) {
+                            .content {
+                                .head {
+                                    .logo {
+                                        font-size: 130px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    body {
+        #frontpage-container {
+            height: 100%;
+            .container {
+                height: 100%;
+                .content {
+                    height: 100%;
+                    .row {
+                        margin: 0;
+                        .col-lg-6:nth-child(2) {
+                            .registeration {
+                                width: 100%!important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    body {
+        #frontpage-container {
+            height: 100%;
+            .container {
+                height: 100%;
+                .content {
+                    height: 100%;
+                    .row {
+                        .col-lg-6:nth-child(1) {
+                            .content {
+                                .intro {
+                                    .navigation {
+                                        padding: 0px 28px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    body {
+        #frontpage-container {
+            padding: 0;
+            height: 100%;
+            .container {
+                height: 100%;
+                .content {
+                    height: 100%;
+                    .row {
+                        .col-lg-6:nth-child(1) {
+                            .content {
+                                .intro {
+                                    .navigation {
+                                        flex-direction: column;
+                                        justify-content: center!important;
+                                        button {
+                                            width: 100%!important;
+                                            margin: 15px auto;
+                                        }
+                                    }
+                                }
+                                .head {
+                                    .logo {
+                                        font-size: 100px;
+                                    }
+                                }
+                            }
+                        }
+                        .col-lg-6:nth-child(2) {
+                            height: auto;
+                            margin: 40px auto;
+                            .registeration {
+                                height: 460px!important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 580px) {
+    body {
+        #frontpage-container {
+            .container {
+                .content {
+                    .row {
+                        .col-lg-6:nth-child(1) {
+                            .content {
+                                .head {
+                                    .logo {
+                                        font-size: 80px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

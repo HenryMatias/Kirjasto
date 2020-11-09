@@ -1,0 +1,35 @@
+// Fonts
+$font-nunito: 'Nunito', sans-serif;
+$font-sacramento: 'Sacramento', cursive;
+
+// Colors
+$theme-color: #ffe3e3;
+$theme-shadow: #e3a4a4;
+
+// Define display and center
+@mixin display ($display, $align, $justify) {
+    display: $display!important;
+    align-items: $align!important;
+    justify-content: $justify!important;
+}
+
+// Universal styles
+.heading {
+    font-family: $font-nunito;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+.logo {
+    color: white;
+    text-shadow: -1px -1px 0 lightgrey, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red;
+    font-size: 150px;
+    margin: 0;
+    text-align: center;
+    font-family: $font-sacramento;
+    letter-spacing: 0.1rem;
+}
+
+// These are the links to the original style files
+@import './kirjahylly';
+@import './frontpage';
+@import './pages-header';
